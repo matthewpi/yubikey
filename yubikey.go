@@ -109,7 +109,7 @@ func (client *Client) Validate(otp string) error {
 
 	// Get the first valid response from all of the API requests.
 	responseData := <-done
-	fmt.Printf("%s: %s\n", responseData["_server"], responseData["status"])
+	//fmt.Printf("%s: %s\n", responseData["_server"], responseData["status"])
 
 	// Check if the OTPs are mismatched.
 	if otp != responseData["otp"] {
